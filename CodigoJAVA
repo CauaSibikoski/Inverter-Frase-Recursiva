@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Atividade1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite uma frase");
+        String frase = scanner.nextLine();
+        String fraseInvertida = Atividade1(frase);
+        System.out.println("Frase invertida " + fraseInvertida);
+
+        scanner.close();
+
+    }
+
+    public static String Atividade1(String frase) {
+        if (frase.isEmpty()) {
+            return frase;
+        } else {
+            return Atividade1(frase.substring(1)) + frase.charAt(0);
+        }
+
+    }
+}
